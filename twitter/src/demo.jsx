@@ -1,19 +1,11 @@
-<div className="flex h-screen w-screen bg-black box-border font-sans">
-
-    <div className="flex w-[55%] h-screen justify-center items-center">
-
-        <img src="/images/x_logo.png" alt="x_logo" className="w-[390px] h-[300px]" />
-    </div>
-
-
-    <div className="flex flex-col w-[40%] h-screen justify-center items-center text-white">
-        {/* This inner div now correctly applies flex-col and gap-5 to its h1 and h2 children */}
-        <div className="flex flex-col gap-5"> {/* Use gap-5 or gap-y-5 for vertical spacing */}
-            <h1 className="text-6xl font-bold">Happening now</h1>
-            <h2 className="font-bold text-4xl">Join today.</h2>
-            <button className="bg-white text-black font-bold py-3 px-6 rounded-full w-full max-w-xs transition-colors duration-200 hover:bg-gray-200">
-                Create account
-            </button>
-        </div>
-    </div>
+<div className="flex flex-col h-[20%] items-start justify-center gap-5">
+  <h1 className="text-gray-300 ">Already have an account?</h1>
+  <button className="bg-black text-white border border-gray-700 py-3 px-6 w-[45%] transition-colors duration-300 hover:bg-gray-800 rounded-full font-bold">
+    Sign in
+  </button>
+  <button className="bg-black text-white border border-gray-700 py-3 px-6 w-[45%] transition-colors duration-300 hover:bg-gray-800 rounded-full font-bold flex items-center justify-center">
+    {/* Image for Grok icon */}
+    <img src="/images/grok_icon.png" alt="Grok Icon" className="w-5 h-5 mr-2" /> {/* Adjust path and size */}
+    Get Grok
+  </button>
 </div>
