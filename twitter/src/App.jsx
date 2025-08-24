@@ -37,13 +37,6 @@ const App = () => {
     return () => clearTimeout(loadingtimer);
   }, []);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setCirle(false);
-  //   }, 1000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   if (isLoading) {
     return <LoadingScreen />;
   }
@@ -52,12 +45,47 @@ const App = () => {
     return <Loadcircle />;
   }
   return (
-    <div className="flex h-screen w-screen bg-black">
-      <div className="flex w-[60%] h-screen justify-center items-center">
-          <img src="/images/x_logo.png" alt="x_logo" className="w-[400px], h-[400px]" />
+
+    <div className="flex h-screen w-screen bg-black box-border">
+      {/* left section logo of x */}
+      <div className="flex w-[55%] h-screen justify-center items-center">
+        <img src="/images/x_logo.png" alt="x_logo" className="w-[400px], h-[400px]" />
       </div>
-      <div className="flex w-[40%] h-screen" >
-        <h1 className="text-white">hello</h1>
+      {/* right section */}
+      <div className="flex flex-col w-[45%] h-screen font-sans text-white">
+        {/* upper right section */}
+        <div className="flex flex-col h-[35%] gap-14 justify-center items-start">
+          <h1 className="text-6xl font-bold ">Happening now</h1>
+          <h2 className="font-bold text-4xl ">Join today.</h2>
+        </div>
+        {/* sign up section */}
+        <div className="flex flex-col h-[30%] w-full gap-5">
+
+          <button className="bg-white text-black py-3 px-6 w-[45%] transition-colors duration-300 hover:bg-gray-200 rounded-full font-bold ">
+            Sign up with Google
+          </button>
+
+          <button className="bg-white text-black py-3 px-6 w-[45%] transition-colors duration-300 hover:bg-gray-200 rounded-full font-bold">
+            Sign up with Apple
+          </button>
+
+          <div className="flex items-center my-4 w-[43.5%]"> {/* Container for the separator */}
+
+            <div className="flex-grow border-t border-gray-700"></div> {/* Left line */}
+            <span className="flex-shrink mx-4 text-gray-400 font-semibold text-sm">OR</span> {/* Text "OR" */}
+            <div className="flex-grow border-t border-gray-700"></div> {/* Right line */}
+
+          </div>
+
+          <button className="bg-white text-black py-3 px-6 w-[45%] transition-colors duration-300 hover:bg-gray-200 rounded-full font-bold">
+            Create account
+          </button>
+          <p className="text-sm">By signing up, you agree to the Terms of Service<br /> and Privacy Policy, including Cookie Use.</p>
+        </div>
+      {/* right lower section */}
+        <div className="flex ">
+          
+        </div>
       </div>
     </div>
   );
